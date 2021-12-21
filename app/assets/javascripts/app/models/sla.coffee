@@ -22,7 +22,7 @@ class App.Sla extends App.Model
   ]
 
   @description = __('''
-** Service Level Agreements **, abbreviated ** SLAs **, help you to meet specific response times for your customers' requests. This way you can define goals such as answering every inquiry within eight hours. If you are at risk of missing this target, Zammad will alert you.
+** Service Level Agreements **, abbreviated ** SLAs **, help you to meet specific response times for your customers' requests. This way you can define goals such as answering every inquiry within eight hours. If you are at risk of missing this target, Clouder will alert you.
 
 You can define targets for three different metrics: ** response time ** (time between the creation of a ticket and the first reaction of an agent), ** update time ** (time between a customer's request and an agent's reaction), and ** solution time ** (time between creating and closing a ticket).
 
