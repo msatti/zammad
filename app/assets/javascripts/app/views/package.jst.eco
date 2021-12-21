@@ -4,7 +4,7 @@
 
 <div class="page-content">
   <p>
-    <%- @T('The installation of packages comes with security implications, because arbitrary code will be executed in the context of the Zammad application.') %>
+    <%- @T('The installation of packages comes with security implications, because arbitrary code will be executed in the context of the Clouder application.') %>
     <br>
     <%- @T('Only packages from known, trusted and verfied sources should be installed.') %>
   </p>
