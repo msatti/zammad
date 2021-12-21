@@ -236,7 +236,7 @@ Setting.create_if_not_exists(
   title:       __('SystemID'),
   name:        'system_id',
   area:        'System::Base',
-  description: __('Defines the system identifier. Every ticket number contains this ID. This ensures that only tickets which belong to your system will be processed as follow-ups (useful when communicating between two instances of Zammad).'),
+  description: __('Defines the system identifier. Every ticket number contains this ID. This ensures that only tickets which belong to your system will be processed as follow-ups (useful when communicating between two instances of Clouder).'),
   options:     {
     form: [
       {
