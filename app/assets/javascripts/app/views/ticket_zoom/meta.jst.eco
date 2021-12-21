@@ -1,3 +1,45 @@
 <small class="task-subline">
-  <%- @C('ticket_hook') %><span class="ticket-number js-objectNumber" data-number="<%- @C('ticket_hook') %><%= @ticket.number %>"><%= @ticket.number %></span> -xxx- <a href="clouder://<%= @ticket.number %>">Open</a> - xxx - <%- @T('created') %> <%- @humanTime(@ticket.created_at) %> <% if !@isCustomer && @ticket.escalation_at: %> - <%- @T('escalation') %> <%- @humanTime(@ticket.escalation_at, true) %><% end %>
+<style>
+.btnxx {
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 25px;
+  text-decoration: none;
+  font-family: 'Fira Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Green */
+.successxx {
+  color: green;
+  background-color: #e0fff4;
+}
+
+.successxx:hover {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Blue */
+.infoxx {
+  color: dodgerblue;
+  background: #d2e8fa
+}
+
+.infoxx:hover {
+  background: #2196F3;
+  color: white;
+}</style>
+<%- @C('ticket_hook') %><span class="ticket-number js-objectNumber" data-number="<%- @C('ticket_hook') %><%= @ticket.number %>"><%= @ticket.number %></span>
+  
+-  
+<a href="clouder://l+<%= @ticket.number %>" class="btnxx successxx">Live</a> 
+- 
+<a href="clouder://a+<%= @ticket.number %>" class="btnxx infoxx">Archive</a>
+-
+
+<%- @T('created') %> <%- @humanTime(@ticket.created_at) %> <% if !@isCustomer && @ticket.escalation_at: %> - <%- @T('escalation') %> <%- @humanTime(@ticket.escalation_at, true) %><% end %>
 </small>
