@@ -27,7 +27,7 @@
 /* Blue */
 .infoxx {
   color: dodgerblue;
-  background: #d2e8fa
+  background: #d2e8fa;
   padding: 14px 14px;
 }
 
