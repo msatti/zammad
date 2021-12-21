@@ -10,7 +10,7 @@
 
   <div class="box box--message">
     <h2><%- @T('Contributing Translations') %></h2>
-    <p><%- @T('Starting with Zammad 5.1, translations can be contributed exclusively via "translations.zammad.org" %l.', 'https://translations.zammad.org') %></p>
+    <p><%- @T('Starting with Clouder 5.1, translations can be contributed exclusively via "translations.zammad.org" %l.', 'https://translations.zammad.org') %></p>
     <p>
       <%- @T('While it will be no longer possible to directly push changed translations from Zammad, they can be contributed in a very convenient user interface based on Weblate.') %>
       </p>
