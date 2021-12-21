@@ -27,11 +27,13 @@
 .infoxx {
   color: dodgerblue;
   background: #d2e8fa
+  padding: 14px 14px;
 }
 
 .infoxx:hover {
   background: #2196F3;
   color: white;
+  padding: 14px 14px;
 }</style>
 <%- @C('ticket_hook') %><span class="ticket-number js-objectNumber" data-number="<%- @C('ticket_hook') %><%= @ticket.number %>"><%= @ticket.number %></span>
   
