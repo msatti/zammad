@@ -38,10 +38,15 @@
 }
 
 
-.displyitem1 { grid-area: a; }
-.displyitem2 { grid-area: b; }
-.displyitem3 { grid-area: c; }
-.displyitem4 { grid-area: d; }
+.displyitem1 { grid-area: a; color: green;}
+.displyitem1:hover {background-color: #04AA6D;color: white;}
+.displyitem2 { grid-area: b; color: green;}
+.displyitem2:hover {background-color: #04AA6D;color: white;}
+.displyitem3 { grid-area: c; color: green;}
+.displyitem3:hover {background-color: #04AA6D;color: white;}
+.displyitem4 { grid-area: d; color: green;}
+.displyitem4:hover {background-color: #04AA6D;color: white;}
+
 
 .grid-container {
   display: grid;
@@ -124,17 +129,18 @@ a.fill-div {
   
   <div class="tooltiptext">
   	<div class="grid-container">
-		<div class="displyitem1"><a href="clouder://l+1+<%= @ticket.number %>" class="fill-div">1</a></div>
-		<div class="displyitem2"><a href="clouder://l+2+<%= @ticket.number %>" class="fill-div">2</a></div>
-		<div class="displyitem3"><a href="clouder://l+3+<%= @ticket.number %>" class="fill-div">3</a></div>
-		<div class="displyitem4"><a href="clouder://l+4+<%= @ticket.number %>" class="fill-div">4</a></div>
+		<div class="displyitem1" onclick="location.href='clouder://l+1+<%= @ticket.number %>';">1</div>
+        <div class="displyitem2" onclick="location.href='clouder://l+2+<%= @ticket.number %>';">2</div>
+        <div class="displyitem3" onclick="location.href='clouder://l+3+<%= @ticket.number %>';">3</div>
+        <div class="displyitem4" onclick="location.href='clouder://l+4+<%= @ticket.number %>';">4</div>
+        
     </div>
   </div>
   
 </div>
 
 - 
-<a href="clouder://a+<%= @ticket.number %>" class="btnxx infoxx">Archive</a>
+<div class="btnxx infoxx" onclick="location.href='clouder://a+<%= @ticket.number %>';">Archive</div>
 -
 
 <%- @T('created') %> <%- @humanTime(@ticket.created_at) %> <% if !@isCustomer && @ticket.escalation_at: %> - <%- @T('escalation') %> <%- @humanTime(@ticket.escalation_at, true) %><% end %>
