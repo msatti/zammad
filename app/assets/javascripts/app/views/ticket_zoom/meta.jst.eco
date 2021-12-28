@@ -35,11 +35,104 @@
   background: #2196F3;
   color: white;
   padding: 14px 14px;
-}</style>
+}
+
+
+.displyitem1 { grid-area: a; }
+.displyitem2 { grid-area: b; }
+.displyitem3 { grid-area: c; }
+.displyitem4 { grid-area: d; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'a b'
+    'c d';
+  grid-gap: 2%;
+  background-color: #e0fff4;
+  padding: 4%;
+  height: 80%;
+  width: 80%;
+  border-radius: 5%;
+  margin: auto;
+
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 10px 10px;
+  font-size: 30px;
+  border-radius: 25px;
+  height: 40%;
+  width: 40%;
+
+}
+a.fill-div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+  overflow: hidden;
+
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+  
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  animation: tooltipkeys 1s;
+}
+
+</style>
 <%- @C('ticket_hook') %><span class="ticket-number js-objectNumber" data-number="<%- @C('ticket_hook') %><%= @ticket.number %>"><%= @ticket.number %></span>
   
 -  
-<a href="clouder://l+<%= @ticket.number %>" class="btnxx successxx">Live</a> 
+<div class="tooltip btnxx successxx">Live
+  
+  <div class="tooltiptext">
+  	<div class="grid-container">
+		<div class="displyitem1"><a href="clouder://l+1+<%= @ticket.number %>" class="fill-div">1</a></div>
+		<div class="displyitem2"><a href="clouder://l+2+<%= @ticket.number %>" class="fill-div">2</a></div>
+		<div class="displyitem3"><a href="clouder://l+3+<%= @ticket.number %>" class="fill-div">3</a></div>
+		<div class="displyitem4"><a href="clouder://l+4+<%= @ticket.number %>" class="fill-div">4</a></div>
+    </div>
+  </div>
+  
+</div>
+
 - 
 <a href="clouder://a+<%= @ticket.number %>" class="btnxx infoxx">Archive</a>
 -
