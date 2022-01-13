@@ -140,7 +140,7 @@ a.fill-div {
 </div>
 
 - 
-<div class="btnxx infoxx" onclick="location.href='clouder://a+<%= @ticket.number %>';">Archive</div>
+<div class="btnxx infoxx"><a href="clouder://a+1+<%= @ticket.number %>">Archive</a></div>
 -
 
 <%- @T('created') %> <%- @humanTime(@ticket.created_at) %> <% if !@isCustomer && @ticket.escalation_at: %> - <%- @T('escalation') %> <%- @humanTime(@ticket.escalation_at, true) %><% end %>
