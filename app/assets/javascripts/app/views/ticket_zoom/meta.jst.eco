@@ -129,10 +129,10 @@ a.fill-div {
   
   <div class="tooltiptext">
   	<div class="grid-container">
-		<div class="displyitem1" onclick="location.href='clouder://l+1+<%= @ticket.number %>';">1</div>
-        <div class="displyitem2" onclick="location.href='clouder://l+2+<%= @ticket.number %>';">2</div>
-        <div class="displyitem3" onclick="location.href='clouder://l+3+<%= @ticket.number %>';">3</div>
-        <div class="displyitem4" onclick="location.href='clouder://l+4+<%= @ticket.number %>';">4</div>
+		    <div class="displyitem1"><a href="clouder://l+1+<%= @ticket.number %>">1</a></div>
+        <div class="displyitem2"><a href="clouder://l+2+<%= @ticket.number %>">2</a></div>
+        <div class="displyitem3"><a href="clouder://l+3+<%= @ticket.number %>">3</a></div>
+        <div class="displyitem4"><a href="clouder://l+4+<%= @ticket.number %>">4</a></div>
         
     </div>
   </div>
