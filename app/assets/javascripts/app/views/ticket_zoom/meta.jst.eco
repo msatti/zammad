@@ -84,6 +84,7 @@ a.fill-div {
 .tooltip {
   position: relative;
   display: inline-block;
+  opacity: 1;
 
 }
 
@@ -119,6 +120,7 @@ a.fill-div {
 .tooltip:hover .tooltiptext {
   visibility: visible;
   animation: tooltipkeys 1s;
+  opacity: 1;
 }
 
 </style>
